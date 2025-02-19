@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <!-- Install -->
+
+    <type name="M2E\Multichannel\Setup\InstallHandlerCollection">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="core" xsi:type="object">M2E\Multichannel\Setup\InstallHandler\CoreHandler</item>
+            </argument>
+        </arguments>
+    </type>
+
+</config>

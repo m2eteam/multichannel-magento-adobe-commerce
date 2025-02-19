@@ -1,0 +1,127 @@
+#m2e_multichannel_tab_container li a.installed:after {
+    content: '\2714';
+    color: #4CAF50;
+    margin-left: 5px;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    padding-right: 20px;
+}
+#m2e_multichannel_tab_container li a.installed {
+    position: relative;
+}
+#m2e_multichannel_tab_container li a span img{
+    margin-right: 4px;
+    width: 16px;
+    height: auto;
+    position: relative;
+    top: 3px;
+}
+.m2e-multichannel-tab {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px 20px 50px;
+    margin: 16px 0;
+    max-width: 800px;
+}
+
+.m2e-multichannel-tab h2 {
+    font-size: 20px;
+    margin: 0 0 12px;
+    font-weight: 600;
+    color: #444;
+}
+
+.m2e-multichannel-tab h2 span {
+    font-size: 14px;
+    margin-left: 8px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.m2e-multichannel-tab h2 span.installed {
+    background-color: #4caf50;
+}
+
+.m2e-multichannel-tab h2 span.not-installed {
+    background-color: #f44336;
+}
+
+.m2e-multichannel-tab .section-title {
+    font-size: 18px;
+    margin-top: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 4px;
+    color: #555;
+}
+
+.m2e-multichannel-tab .resources {
+    margin-bottom: 45px;
+    padding-top: 45px;
+    border-bottom: 1px solid #ddd;
+}
+
+.m2e-multichannel-tab .resources a {
+    display: inline-block;
+    margin-right: 16px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.m2e-multichannel-tab .resources a:hover {
+    text-decoration: underline;
+}
+
+.m2e-multichannel-tab ul {
+    margin: 12px 0 45px;
+    padding: 0 0 8px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.m2e-multichannel-tab .description {
+    margin-bottom: 30px;
+}
+
+.m2e-multichannel-tab ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.m2e-multichannel-tab ul li b {
+    font-weight: 600;
+}
+
+.m2e-multichannel-tab a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-right: 12px;
+    font-weight: 500;
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.m2e-multichannel-tab a:hover {
+    background-color: #e6f7ff;
+    color: #0056b3;
+    border-color: #0056b3;
+}
+
+.m2e-multichannel-tab p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 45px;
+}

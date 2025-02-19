@@ -1,0 +1,71 @@
+<?php
+/** @var \M2E\Multichannel\Block\Adminhtml\Dashboard\Tabs\TabContent $block */
+
+?>
+<?php
+$extension = $block->getExtension();
+$metadata = $extension->getMetadata();
+?>
+
+<div class="m2e-multichannel-tab">
+    <?php
+    if ($extension->isEnabled()) { ?>
+        <h2><?= $extension->getTitle() ?><span class="installed"><?= __('Installed') ?></span></h2>
+        <div class="section-title"><?= __('Resources & Support') ?></div>
+        <div class="resources">
+            <p><a href="<?= $metadata->getDocsUrl() ?>" target="_blank"><?= __('User Documentation') ?></a></p>
+            <p><a href="<?= $metadata->getSupportUrl() ?>" target="_blank"><?= __('Contact Support') ?></a></p>
+        </div>
+        <a href="<?= $metadata->getMarketplaceUrl() ?>" target="_blank">
+            <?= __('Upgrade') ?> <?= $extension->getTitle() ?>
+        </a>
+        <?php
+        if ($extension->getDescription()) { ?>
+            <div><?= $extension->getDescription() ?></div>
+            <?php
+        } ?>
+        <?php
+    } else { ?>
+        <h2><?= $extension->getTitle() ?><span class="not-installed"><?= __('Not Installed') ?></span></h2>
+        <p class="description"><?= __(
+                'Connect your Adobe Commerce (Magento) store with global Amazon marketplaces. Automate '
+                . 'listings, inventory synchronization, and order management for efficient multichannel selling.'
+            ) ?></p>
+
+        <div class="section-title"><?= __('Key Features') ?>:</div>
+        <ul>
+            <li><b><?= __('Automated listings') ?></b> – <?= __(
+                    'List and update products on Amazon from your Magento system.'
+                ) ?></li>
+            <li><b><?= __('Real-time inventory sync') ?></b> – <?= __(
+                    'Prevent overselling with automatic stock updates.'
+                ) ?></li>
+            <li><b><?= __('Centralized order management') ?></b> – <?= __(
+                    'Handle Amazon orders directly in Magento.'
+                ) ?></li>
+            <li><b><?= __('Fulfillment by Amazon (FBA) support') ?></b> – <?= __(
+                    'Synchronize FBA stock and orders with Magento.'
+                ) ?></li>
+            <li><b><?= __('Amazon Business integration') ?></b> – <?= __(
+                    'Access B2B features like special pricing and quantity discounts.'
+                ) ?></li>
+            <li><b><?= __('Dynamic repricing tool') ?></b> – <?= __(
+                    'Automatically adjust prices to stay competitive and win the Buy Box.'
+                ) ?></li>
+        </ul>
+
+        <p><a href="<?= $metadata->getMarketplaceUrl() ?>" target="_blank">
+                <?= __('Install') ?> <?= $extension->getTitle() ?>
+            </a></p>
+        <p><a href="<?= $metadata->getDocInstallUrl() ?>" target="_blank"><?= __(
+                    'View Installation Steps'
+                ) ?></a></p>
+        <a href="<?= $metadata->getSupportUrl() ?>" target="_blank"><?= __('Contact Support') ?></a>
+        <?php
+        if ($extension->getDescription()) { ?>
+            <div><?= $extension->getDescription() ?></div>
+            <?php
+        } ?>
+        <?php
+    } ?>
+</div>

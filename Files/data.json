@@ -1,0 +1,86 @@
+[
+    {
+        "id" : "Ess_M2ePro_Ebay",
+        "module_name" : "Ess_M2ePro",
+        "module_label" : "eBay",
+        "title" : "M2E Pro eBay Integration",
+        "url" : {
+            "docs" : "https://docs-m2.m2epro.com/docs-category/ebay-integration-en/",
+            "support" : "https://help.m2epro.com/en/support/home",
+            "marketplace" : "https://commercemarketplace.adobe.com/m2e-ebay-amazon-magento2.html",
+            "docs_install" : "https://docs-m2.m2epro.com/docs-category/install-upgrade-m2e-pro-en/"
+        }
+    },
+    {
+        "id" : "Ess_M2ePro_Amazon",
+        "module_name" : "Ess_M2ePro",
+        "module_label" : "Amazon",
+        "title" : "M2E Pro Amazon Integration",
+        "url" : {
+            "docs" : "https://docs-m2.m2epro.com/docs-category/amazon-integration-en/",
+            "support" : "https://help.m2epro.com/en/support/home",
+            "marketplace" : "https://commercemarketplace.adobe.com/m2e-ebay-amazon-magento2.html",
+            "docs_install" : "https://docs-m2.m2epro.com/docs-category/install-upgrade-m2e-pro-en/"
+        }
+    },
+    {
+        "id" : "Ess_M2ePro_Walmart",
+        "module_name" : "Ess_M2ePro",
+        "module_label" : "Walmart",
+        "title" : "M2E Pro Walmart Integration",
+        "url" : {
+            "docs" : "https://docs-m2.m2epro.com/docs-category/walmart-integration-en/",
+            "support" : "https://help.m2epro.com/en/support/home",
+            "marketplace" : "https://commercemarketplace.adobe.com/m2e-ebay-amazon-magento2.html",
+            "docs_install" : "https://docs-m2.m2epro.com/docs-category/install-upgrade-m2e-pro-en/"
+        }
+    },
+    {
+        "id" : "M2E_OnBuy_OnBuy",
+        "module_name" : "M2E_OnBuy",
+        "module_label" : "OnBuy",
+        "title" : "M2E OnBuy Connect",
+        "url" : {
+            "docs" : "https://docs-m2.m2epro.com/docs-category/onbuy-magento-integration-en/",
+            "support" : "https://help.m2epro.com/en/support/home",
+            "marketplace" : "https://commercemarketplace.adobe.com/m2e-onbuy-magento-adobe-commerce.html",
+            "docs_install" : "https://docs-m2.m2epro.com/docs-category/install-upgrade-m2e-onbuy-en/"
+        }
+    },
+    {
+        "id" : "M2E_TikTokShop_TikTokShop",
+        "module_name" : "M2E_TikTokShop",
+        "module_label" : "TikTok Shop",
+        "title" : "M2E TikTok Shop Connect",
+        "url" : {
+            "docs" : "https://docs-m2.m2epro.com/docs-category/tiktok-magento-integration-en/",
+            "support" : "https://help.m2epro.com/en/support/home",
+            "marketplace" : "https://commercemarketplace.adobe.com/m2e-tiktok-shop-adobe-commerce.html",
+            "docs_install" : "https://docs-m2.m2epro.com/docs-category/install-upgrade-m2e-tiktok-shop-en/"
+        }
+    },
+    {
+        "id" : "M2E_Kaufland_Kaufland",
+        "module_name" : "M2E_Kaufland",
+        "module_label" : "Kaufland",
+        "title" : "M2E Kaufland Connect",
+        "url" : {
+            "docs" : "https://docs-m2.m2epro.com/docs-category/kaufland-magento-integration-en/",
+            "support" : "https://help.m2epro.com/en/support/home",
+            "marketplace" : "https://commercemarketplace.adobe.com/m2e-kaufland-adobe-commerce.html",
+            "docs_install" : "https://docs-m2.m2epro.com/docs-category/install-upgrade-m2e-kaufland-en/"
+        }
+    },
+    {
+        "id" : "M2E_Otto_Otto",
+        "module_name" : "M2E_Otto",
+        "module_label" : "Otto",
+        "title" : "M2E OTTO Connect",
+        "url" : {
+            "docs" : "https://docs-m2.m2epro.com/docs-category/otto-magento-integration-en/",
+            "support" : "https://help.m2epro.com/en/support/home",
+            "marketplace" : "https://commercemarketplace.adobe.com/m2e-otto-adobe-commerce.html",
+            "docs_install" : "https://docs-m2.m2epro.com/docs-category/install-upgrade-m2e-otto-en/"
+        }
+    }
+]

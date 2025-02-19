@@ -1,0 +1,29 @@
+{
+    "name" : "m2e/multichannel-magento-adobe-commerce",
+    "description" : "M2E Multichannel Connect is a native Magento (Adobe Commerce) marketplace extension that enables merchants to link and manage all their M2E Magento integrations in one place",
+    "type" : "magento2-module",
+    "version" : "1.0.0",
+    "license" : "proprietary",
+    "keywords" : [
+        "magento",
+        "multichannel connect",
+        "m2e",
+        "m2e pro connector",
+        "marketplace extension for magento 2",
+        "ecommerce",
+        "global marketplace"
+    ],
+    "homepage" : "https://m2epro.com",
+    "require" : {
+        "php" : ">=7.4",
+        "m2e/core": "^1.3.0"
+    },
+    "autoload" : {
+        "files" : [
+            "registration.php"
+        ],
+        "psr-4" : {
+            "M2E\\Multichannel\\" : ""
+        }
+    }
+}

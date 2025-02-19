@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="M2E_Multichannel::multichannel" title="Multichannel" module="M2E_Multichannel" sortOrder="20"
+             dependsOnModule="M2E_Multichannel" resource="M2E_Multichannel::multichannel"/>
+
+        <add id="M2E_Multichannel::m2e_dashboard" title="Dashboard" module="M2E_Multichannel" sortOrder="10"
+             parent="M2E_Multichannel::multichannel" resource="M2E_Multichannel::multichannel"
+             action="m2e_multichannel/dashboard/index"/>
+    </menu>
+</config>

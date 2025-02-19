@@ -1,0 +1,44 @@
+<?php
+/** @var \M2E\Multichannel\Block\Adminhtml\Dashboard\Tabs\TabContent $block */
+
+?>
+<?php
+$extension = $block->getExtension();
+$metadata = $extension->getMetadata();
+?>
+
+<div class="m2e-multichannel-tab">
+    <?php
+    if ($extension->isEnabled()) { ?>
+        <h2><?= $extension->getTitle() ?><span class="installed"><?= __('Installed') ?></span></h2>
+        <div class="section-title"><?= __('Resources & Support') ?></div>
+        <div class="resources">
+            <p><a href="<?= $metadata->getDocsUrl() ?>" target="_blank"><?= __('User Documentation') ?></a></p>
+            <p><a href="<?= $metadata->getSupportUrl() ?>" target="_blank"><?= __('Contact Support') ?></a></p>
+        </div>
+        <a href="<?= $metadata->getMarketplaceUrl() ?>" target="_blank">
+            <?= __('Upgrade') ?> <?= $extension->getTitle() ?>
+        </a>
+        <?php
+        if ($extension->getDescription()) { ?>
+            <div><?= $extension->getDescription() ?></div>
+            <?php
+        } ?>
+        <?php
+    } else { ?>
+        <h2><?= $extension->getTitle() ?><span class="not-installed"><?= __('Not Installed') ?></span></h2>
+        <p><a href="<?= $metadata->getMarketplaceUrl() ?>" target="_blank">
+                <?= __('Install') ?> <?= $extension->getTitle() ?>
+            </a></p>
+        <p><a href="<?= $metadata->getDocInstallUrl() ?>" target="_blank"><?= __(
+                    'View Installation Steps'
+                ) ?></a></p>
+        <a href="<?= $metadata->getSupportUrl() ?>" target="_blank"><?= __('Contact Support') ?></a>
+        <?php
+        if ($extension->getDescription()) { ?>
+            <div><?= $extension->getDescription() ?></div>
+            <?php
+        } ?>
+        <?php
+    } ?>
+</div>

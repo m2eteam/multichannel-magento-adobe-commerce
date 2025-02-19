@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="M2E_Multichannel::css/dashboard/style.css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Backend\Block\Widget\Container" template="M2E_Multichannel::dashboard/container.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="M2E\Multichannel\Block\Adminhtml\Dashboard\Tabs" name="m2e_multichannel.dashboard.tabs"/>
+        </referenceContainer>
+    </body>
+</page>
