@@ -1,0 +1,24 @@
+<?php
+/** @var \M2E\Multichannel\Block\Adminhtml\Menu $block */
+
+?>
+<?php
+if ($block->isUnifyModeEnabled()) { ?>
+    <style>
+        <?= $block->getMenuIdsForHide(); ?>
+        {
+            display: none;
+        }
+    </style>
+
+    <script type="text/x-magento-init">
+        {
+            "*": {
+                "M2E_Multichannel/js/menu": {
+                    "menuConfigs": <?= $block->getJsonConfig(); ?>
+        }
+    }
+}
+    </script>
+    <?php
+} ?>

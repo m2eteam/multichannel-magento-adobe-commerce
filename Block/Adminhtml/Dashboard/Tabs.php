@@ -9,15 +9,18 @@ class Tabs extends \Magento\Backend\Block\Widget\Tabs
     protected $_template = 'M2E_Multichannel::dashboard/tabs.phtml';
 
     private \M2E\Multichannel\Model\ExtensionProvider $extensionProvider;
+    private \Magento\Framework\App\RequestInterface $request;
 
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
         \Magento\Framework\Json\EncoderInterface $jsonEncoder,
         \Magento\Backend\Model\Auth\Session $authSession,
         \M2E\Multichannel\Model\ExtensionProvider $extensionProvider,
+        \Magento\Framework\App\RequestInterface $request,
         array $data = []
     ) {
         $this->extensionProvider = $extensionProvider;
+        $this->request = $request;
 
         parent::__construct($context, $jsonEncoder, $authSession, $data);
     }
@@ -39,6 +42,9 @@ class Tabs extends \Magento\Backend\Block\Widget\Tabs
                 $extension->getId(),
                 $this->getTabParams($extension)
             );
+        }
+        if ($this->request->getParam('tab')) {
+            $this->setActiveTab($this->request->getParam('tab'));
         }
 
         return parent::_prepareLayout();

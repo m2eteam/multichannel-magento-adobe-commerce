@@ -14,6 +14,7 @@ class ExtensionProvider
         'M2E_TikTokShop_TikTokShop' => 'M2E_Multichannel::dashboard/tabs/tiktok_tab_content.phtml',
         'M2E_Kaufland_Kaufland' => 'M2E_Multichannel::dashboard/tabs/kaufland_tab_content.phtml',
         'M2E_Otto_Otto' => 'M2E_Multichannel::dashboard/tabs/otto_tab_content.phtml',
+        'M2E_Temu_Temu' => 'M2E_Multichannel::dashboard/tabs/temu_tab_content.phtml',
     ];
 
     private const EXTENSION_ICONS = [
@@ -24,6 +25,18 @@ class ExtensionProvider
         'M2E_TikTokShop_TikTokShop' => 'M2E_Multichannel::images/logo-tts.svg',
         'M2E_Kaufland_Kaufland' => 'M2E_Multichannel::images/logo-kaufland.svg',
         'M2E_Otto_Otto' => 'M2E_Multichannel::images/logo-otto.svg',
+        'M2E_Temu_Temu' => 'M2E_Multichannel::images/logo-temu.svg',
+    ];
+
+    private const EXTENSION_MENU_CSS_ID = [
+        'Ess_M2ePro_Ebay' => 'menu-ess-m2epro-ebay',
+        'Ess_M2ePro_Amazon' => 'menu-ess-m2epro-amazon',
+        'Ess_M2ePro_Walmart' => 'menu-ess-m2epro-walmart',
+        'M2E_OnBuy_OnBuy' => 'menu-m2e-onbuy-onbuy',
+        'M2E_TikTokShop_TikTokShop' => 'menu-m2e-tiktokshop-tts',
+        'M2E_Kaufland_Kaufland' => 'menu-m2e-kaufland-main',
+        'M2E_Otto_Otto' => 'menu-m2e-otto-otto',
+        'M2E_Temu_Temu' => 'menu-m2e-temu-temu',
     ];
 
     private const EXTENSION_TEMPLATE_DEFAULT = 'M2E_Multichannel::dashboard/tabs/tab_content.phtml';
@@ -59,7 +72,8 @@ class ExtensionProvider
                     self::EXTENSION_TEMPLATES[$source->getId()] ?? self::EXTENSION_TEMPLATE_DEFAULT,
                     $this->createMetadata($source->getMetadata()),
                     $source->getDescription(),
-                    $this->getIcon($source)
+                    $this->getIcon($source),
+                    self::EXTENSION_MENU_CSS_ID[$source->getId()] ?? null
                 );
             }
         }

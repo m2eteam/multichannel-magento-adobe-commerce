@@ -6,55 +6,25 @@ namespace M2E\Multichannel\Helper\Module;
 
 class Maintenance implements \M2E\Core\Model\Module\MaintenanceInterface
 {
-    public const MENU_ROOT_NODE_NICK = 'M2E_Multichannel::multichannel_maintenance';
-
-    private const MAINTENANCE_CONFIG_PATH = 'm2e_multichannel/maintenance';
-
-    private \M2E\Core\Model\Module\Maintenance\AdapterFactory $adapterFactory;
-    private \M2E\Core\Model\Module\Maintenance\Adapter $adapter;
-
-    public function __construct(
-        \M2E\Core\Model\Module\Maintenance\AdapterFactory $adapterFactory
-    ) {
-        $this->adapterFactory = $adapterFactory;
-    }
-
     public function enable(): void
     {
-        $this->getAdapter()->enable();
     }
 
     public function isEnabled(): bool
     {
-        return $this->getAdapter()->isEnabled();
+        return false;
     }
 
     public function enableDueLowMagentoVersion(): void
     {
-        $this->getAdapter()->enableDueLowMagentoVersion();
     }
 
     public function isEnabledDueLowMagentoVersion(): bool
     {
-        return $this->getAdapter()->isEnabledDueLowMagentoVersion();
+        return false;
     }
 
     public function disable(): void
     {
-        $this->getAdapter()->disable();
-    }
-
-    // ----------------------------------------
-
-    private function getAdapter(): \M2E\Core\Model\Module\Maintenance\Adapter
-    {
-        /** @psalm-suppress RedundantPropertyInitializationCheck */
-        if (!isset($this->adapter)) {
-            $this->adapter = $this->adapterFactory->create(
-                self::MAINTENANCE_CONFIG_PATH,
-            );
-        }
-
-        return $this->adapter;
     }
 }

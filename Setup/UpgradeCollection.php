@@ -13,6 +13,8 @@ class UpgradeCollection extends \M2E\Core\Model\Setup\AbstractUpgradeCollection
 
     protected function getSourceVersionUpgrades(): array
     {
-        return [];
+        return [
+            '1.0.0' => ['to' => '1.1.0', 'upgrade' => null]
+        ];
     }
 }

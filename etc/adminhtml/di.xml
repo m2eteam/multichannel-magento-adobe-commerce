@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Backend\Model\Menu\Config">
+        <plugin name="multichannel_plugin_menu_magento_backend_model_menu_config"
+                type="M2E\Multichannel\Plugin\Menu\Magento\Backend\Model\Menu\Config"/>
+    </type>
+</config>

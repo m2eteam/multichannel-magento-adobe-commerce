@@ -15,6 +15,7 @@ class Extension
     private string $id;
     private string $moduleLabel;
     private ExtensionMetadata $metadata;
+    private ?string $menuCssId;
 
     public function __construct(
         string $id,
@@ -25,7 +26,8 @@ class Extension
         string $template,
         ExtensionMetadata $metadata,
         ?string $description,
-        ?string $icon
+        ?string $icon,
+        ?string $menuId
     ) {
         $this->moduleName = $moduleName;
         $this->title = $title;
@@ -36,6 +38,7 @@ class Extension
         $this->id = $id;
         $this->moduleLabel = $moduleLabel;
         $this->metadata = $metadata;
+        $this->menuCssId = $menuId;
     }
 
     public function getModuleName(): string
@@ -81,5 +84,10 @@ class Extension
     public function getMetadata(): ExtensionMetadata
     {
         return $this->metadata;
+    }
+
+    public function getMenuCssId(): ?string
+    {
+        return $this->menuCssId;
     }
 }

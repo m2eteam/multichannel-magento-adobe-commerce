@@ -113,6 +113,12 @@
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
+.m2e-multichannel-tab a.temu-selling {
+    margin-right: 0;
+    border: 0;
+    padding: 0 2px;
+}
+
 .m2e-multichannel-tab a:hover {
     background-color: #e6f7ff;
     color: #0056b3;
@@ -124,4 +130,64 @@
     line-height: 1.8;
     color: #666;
     margin-bottom: 45px;
+}
+
+#m2e-unify-form .admin__field-control{
+    margin-left: 15px;
+    position: relative;
+    top: 6px;
+    display: inline-block;
+}
+#m2e-unify-form .switch {
+    position: relative;
+    display: inline-block;
+    width: 37px;
+    height: 22px;
+    border: 1px solid #aaa6a0;
+    border-radius: 12px;
+}
+
+#m2e-unify-form .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+#m2e-unify-form .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+#m2e-unify-form .slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 0;
+    bottom: -1px;
+    background-color: white;
+    transition: .4s;
+    border: 1px solid #aaa6a0;
+}
+
+#m2e-unify-form input:checked + .slider {
+    background-color: #79a22e;
+}
+
+#m2e-unify-form input:checked + .slider:before {
+    transform: translateX(13px);
+}
+
+#m2e-unify-form .slider.round {
+    border-radius: 34px;
+}
+
+#m2e-unify-form .slider.round:before {
+    border-radius: 50%;
 }

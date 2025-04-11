@@ -1,0 +1,30 @@
+<?php
+/** @var $block \M2E\Multichannel\Block\Adminhtml\Dashboard\UnifyForm */
+?>
+<form id="m2e-unify-form" action="<?= $block->getUrl('m2e_multichannel/dashboard/saveSettings') ?>" method="POST">
+    <input name="form_key" value="<?= $block->getFormKey() ?>" type="hidden"/>
+    <div class="admin__field">
+        <label class="admin__field-label"><?= __('Unify Integrations'); ?></label>
+        <div class="admin__field-control">
+            <label class="switch">
+                <input type="checkbox"
+                       name="unify_mode"
+                       class="admin__control-checkbox"
+                       id="unify-toggle"
+                    <?= $block->isUnifyModeEnabled() ? 'checked' : '' ?>
+                >
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+</form>
+
+<script>
+    require(['jquery'], function ($) {
+        $(document).ready(function () {
+            $('#unify-toggle').on('change', function () {
+                $(this).closest('form').submit();
+            });
+        });
+    });
+</script>

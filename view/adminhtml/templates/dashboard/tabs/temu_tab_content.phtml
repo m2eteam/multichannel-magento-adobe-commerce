@@ -1,0 +1,69 @@
+<?php
+/** @var \M2E\Multichannel\Block\Adminhtml\Dashboard\Tabs\TabContent $block */
+
+?>
+<?php
+$extension = $block->getExtension();
+$metadata = $extension->getMetadata();
+?>
+
+<div class="m2e-multichannel-tab">
+    <?php
+    if ($extension->isEnabled()) { ?>
+        <h2><?= $extension->getTitle() ?><span class="installed"><?= __('Installed') ?></span></h2>
+        <div class="section-title"><?= __('Resources & Support') ?></div>
+        <div class="resources">
+            <p><a href="<?= $metadata->getDocsUrl() ?>" target="_blank"><?= __('User Documentation') ?></a></p>
+            <p><a href="<?= $metadata->getSupportUrl() ?>" target="_blank"><?= __('Contact Support') ?></a></p>
+        </div>
+        <a href="<?= $metadata->getMarketplaceUrl() ?>" target="_blank">
+            <?= __('Upgrade') ?> <?= $extension->getTitle() ?>
+        </a>
+        <?php
+        if ($extension->getDescription()) { ?>
+            <div><?= $extension->getDescription() ?></div>
+            <?php
+        } ?>
+        <?php
+    } else { ?>
+        <h2><?= $extension->getTitle() ?><span class="not-installed"><?= __('Not Installed') ?></span></h2>
+        <p class="description"><?= __(
+                'Connect your Adobe Commerce (Magento) store with Temu, one of the fastest-growing marketplaces '
+                . 'with 100M+ shoppers.'
+            ) ?></p>
+
+        <div class="section-title"><?= __('Key Features') ?>:</div>
+        <ul>
+            <li><b><?= __('Easy product listing') ?></b> – <?= __(
+                    'Quickly list and categorize products from Magento on Temu.'
+                ) ?></li>
+            <li><b><?= __('Real-time inventory synchronization') ?></b> – <?= __(
+                    'Automatically update stock levels to prevent overselling.'
+                ) ?></li>
+            <li><b><?= __('Centralized order management') ?></b> – <?= __(
+                    'Handle Temu orders directly within Magento.'
+                ) ?></li>
+            <li><b><?= __('Flexible stock & pricing rules') ?></b> – <?= __(
+                    'Adjust product quantities and prices dynamically for Temu.'
+                ) ?>
+            </li>
+        </ul>
+        <p><?= __('If you\'re selling in the US, take advantage of our exclusive offer.') ?>
+            <a class='temu-selling' href="https://seller.temu.com/registration.html?merchant_exclusive_invitation_code=69751f0e1cc9aa93"><?= __('Start selling on Temu') ?></a>
+            <?= __('with M2E and get a 90-day free trial for M2E Connect extension.') ?></p>
+
+        <p><a href="<?= $metadata->getMarketplaceUrl() ?>" target="_blank">
+                <?= __('Install') ?> <?= $extension->getTitle() ?>
+            </a></p>
+        <p><a href="<?= $metadata->getDocInstallUrl() ?>" target="_blank"><?= __(
+                    'View Installation Steps'
+                ) ?></a></p>
+        <a href="<?= $metadata->getSupportUrl() ?>" target="_blank"><?= __('Contact Support') ?></a>
+        <?php
+        if ($extension->getDescription()) { ?>
+            <div><?= $extension->getDescription() ?></div>
+            <?php
+        } ?>
+        <?php
+    } ?>
+</div>

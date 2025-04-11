@@ -20,3 +20,30 @@
 .admin__menu .item-multichannel.level-0 > a > span {
   letter-spacing: 0;
 }
+
+#menu-m2e-multichannel-multichannel {
+  .item-dashboard.level-1 > a:before {
+    content: '';
+  }
+
+  .level-2 > .level-0 {
+    margin: 0;
+    visibility: hidden;
+    display: none;
+
+    > a {
+      display: none;
+    }
+
+    &._show {
+      margin-bottom: 0;
+      visibility: visible;
+      position: unset;
+      display: block;
+
+      > a {
+        display: none;
+      }
+    }
+  }
+}

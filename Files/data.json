@@ -82,5 +82,17 @@
             "marketplace" : "https://commercemarketplace.adobe.com/m2e-otto-adobe-commerce.html",
             "docs_install" : "https://docs-m2.m2epro.com/docs-category/install-upgrade-m2e-otto-en/"
         }
+    },
+    {
+        "id" : "M2E_Temu_Temu",
+        "module_name" : "M2E_Temu",
+        "module_label" : "Temu",
+        "title" : "M2E Temu Connect",
+        "url" : {
+            "docs" : "https://docs-m2.m2epro.com/docs-category/temu-magento-integration-en/",
+            "support" : "https://help.m2epro.com/en/support/home",
+            "marketplace" : "https://commercemarketplace.adobe.com/m2e-temu-adobe-commerce.html",
+            "docs_install" : "https://docs-m2.m2epro.com/docs-category/install-upgrade-m2e-temu-en/"
+        }
     }
 ]

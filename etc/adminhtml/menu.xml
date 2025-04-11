@@ -9,5 +9,8 @@
         <add id="M2E_Multichannel::m2e_dashboard" title="Dashboard" module="M2E_Multichannel" sortOrder="10"
              parent="M2E_Multichannel::multichannel" resource="M2E_Multichannel::multichannel"
              action="m2e_multichannel/dashboard/index"/>
+
+        <add id="M2E_Multichannel::integrations" title="Integrations" module="M2E_Multichannel" sortOrder="20"
+             parent="M2E_Multichannel::multichannel" resource="M2E_Multichannel::integrations"/>
     </menu>
 </config>
