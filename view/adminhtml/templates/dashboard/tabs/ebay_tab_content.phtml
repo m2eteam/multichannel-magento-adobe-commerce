@@ -10,59 +10,59 @@ $metadata = $extension->getMetadata();
 <div class="m2e-multichannel-tab">
     <?php
     if ($extension->isEnabled()) { ?>
-        <h2><?= $extension->getTitle() ?><span class="installed"><?= __('Installed') ?></span></h2>
-        <div class="section-title"><?= __('Resources & Support') ?></div>
+        <h2><?= /* @noEscape */ $extension->getTitle() ?><span class="installed"><?= /* @noEscape */ __('Installed') ?></span></h2>
+        <div class="section-title"><?= /* @noEscape */ __('Resources & Support') ?></div>
         <div class="resources">
-            <p><a href="<?= $metadata->getDocsUrl() ?>" target="_blank"><?= __('User Documentation') ?></a></p>
-            <p><a href="<?= $metadata->getSupportUrl() ?>" target="_blank"><?= __('Contact Support') ?></a></p>
+            <p><a href="<?= /* @noEscape */ $metadata->getDocsUrl() ?>" target="_blank"><?= /* @noEscape */ __('User Documentation') ?></a></p>
+            <p><a href="<?= /* @noEscape */ $metadata->getSupportUrl() ?>" target="_blank"><?= /* @noEscape */ __('Contact Support') ?></a></p>
         </div>
-        <a href="<?= $metadata->getMarketplaceUrl() ?>" target="_blank">
-            <?= __('Upgrade') ?> <?= $extension->getTitle() ?>
+        <a href="<?= /* @noEscape */ $metadata->getMarketplaceUrl() ?>" target="_blank">
+            <?= /* @noEscape */ __('Upgrade') ?> <?= /* @noEscape */ $extension->getTitle() ?>
         </a>
         <?php
         if ($extension->getDescription()) { ?>
-            <div><?= $extension->getDescription() ?></div>
+            <div><?= /* @noEscape */ $extension->getDescription() ?></div>
             <?php
         } ?>
         <?php
     } else { ?>
-        <h2><?= $extension->getTitle() ?><span class="not-installed"><?= __('Not Installed') ?></span></h2>
-        <p class="description"><?= __(
+        <h2><?= /* @noEscape */ $extension->getTitle() ?><span class="not-installed"><?= /* @noEscape */ __('Not Installed') ?></span></h2>
+        <p class="description"><?= /* @noEscape */ __(
                 'Connect your Adobe Commerce (Magento) store with global eBay marketplaces, including '
                 . 'eBay Motors. Automate listings, inventory sync, and order management for a smooth multichannel'
                 . ' selling experience.'
             ) ?></p>
 
-        <div class="section-title"><?= __('Key Features') ?>:</div>
+        <div class="section-title"><?= /* @noEscape */ __('Key Features') ?>:</div>
         <ul>
-            <li><b><?= __('Automated listings') ?></b> – <?= __(
+            <li><b><?= /* @noEscape */ __('Automated listings') ?></b> – <?= /* @noEscape */ __(
                     'List and update products on eBay from your Magento system.'
                 ) ?></li>
-            <li><b><?= __('Real-time inventory sync') ?></b> – <?= __(
+            <li><b><?= /* @noEscape */ __('Real-time inventory sync') ?></b> – <?= /* @noEscape */ __(
                     'Prevent overselling with automatic stock updates.'
                 ) ?></li>
-            <li><b><?= __('Centralized order management') ?></b> – <?= __('Handle eBay orders directly in Magento.') ?>
+            <li><b><?= /* @noEscape */ __('Centralized order management') ?></b> – <?= /* @noEscape */ __('Handle eBay orders directly in Magento.') ?>
             </li>
-            <li><b><?= __('Flexible stock & pricing rules') ?></b> – <?= __(
+            <li><b><?= /* @noEscape */ __('Flexible stock & pricing rules') ?></b> – <?= /* @noEscape */ __(
                     'Adjust quantities and prices dynamically per marketplace.'
                 ) ?></li>
-            <li><b><?= __('eBay Motors compatibility') ?></b> – <?= __(
+            <li><b><?= /* @noEscape */ __('eBay Motors compatibility') ?></b> – <?= /* @noEscape */ __(
                     'List auto parts with the Parts Compatibility feature.'
                 ) ?></li>
-            <li><b><?= __('Promotional tools') ?></b> – <?= __('Apply and manage eBay promotions for your listings.') ?>
+            <li><b><?= /* @noEscape */ __('Promotional tools') ?></b> – <?= /* @noEscape */ __('Apply and manage eBay promotions for your listings.') ?>
             </li>
         </ul>
 
-        <p><a href="<?= $metadata->getMarketplaceUrl() ?>" target="_blank">
-                <?= __('Install') ?> <?= $extension->getTitle() ?>
+        <p><a href="<?= /* @noEscape */ $metadata->getMarketplaceUrl() ?>" target="_blank">
+                <?= /* @noEscape */ __('Install') ?> <?= /* @noEscape */ $extension->getTitle() ?>
             </a></p>
-        <p><a href="<?= $metadata->getDocInstallUrl() ?>" target="_blank"><?= __(
+        <p><a href="<?= /* @noEscape */ $metadata->getDocInstallUrl() ?>" target="_blank"><?= /* @noEscape */ __(
                     'View Installation Steps'
                 ) ?></a></p>
-        <a href="<?= $metadata->getSupportUrl() ?>" target="_blank"><?= __('Contact Support') ?></a>
+        <a href="<?= /* @noEscape */ $metadata->getSupportUrl() ?>" target="_blank"><?= /* @noEscape */ __('Contact Support') ?></a>
         <?php
         if ($extension->getDescription()) { ?>
-            <div><?= $extension->getDescription() ?></div>
+            <div><?= /* @noEscape */ $extension->getDescription() ?></div>
             <?php
         } ?>
         <?php

@@ -5,7 +5,6 @@
 ?>
 <?php
 if (!empty($tabs)): ?>
-
     <div class="admin__page-nav" data-role="container" id="<?= $escaper->escapeHtmlAttr($block->getId()) ?>">
         <?php
         if ($block->getTitle()): ?>
@@ -53,11 +52,11 @@ if (!empty($tabs)): ?>
 
                         <span>
                            <?php
-                           if ($_tab->getIcon()) { ?>
-                               <img src="<?= $_tab->getIcon() ?>" alt="Tab icon">
+                            if ($_tab->getIcon()) { ?>
+                                <img src="<?= /* @noEscape */ $_tab->getIcon() ?>" alt="Tab icon">
                            <?php
-                           } ?>
-                            <?= $escaper->escapeHtml($block->getTabLabel($_tab)) ?>
+                            } ?>
+                             <?= $escaper->escapeHtml($block->getTabLabel($_tab)) ?>
                        </span>
 
                         <span class="admin__page-nav-item-messages" data-role="item-messages">
